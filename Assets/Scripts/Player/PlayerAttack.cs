@@ -10,6 +10,13 @@ public class PlayerAttack : MonoBehaviour
         Player.State = "Idle";
     }
 
+    public void Attack()
+    {
+        GameObject g = Instantiate(Player.Attack, transform.position + transform.forward * 5, Player.Attack.transform.rotation);
+        g.GetComponent<Rigidbody>().linearVelocity = transform.forward * 70;
+        GameObject.Destroy(g, 5);
+    }
+
     void Update()
     {
         if (Input.GetButton("Fire1") && !isAttacking)

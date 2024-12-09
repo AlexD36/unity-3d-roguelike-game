@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void LateUpdate()
     {
-        Vector3 targetposition = transform.position + new Vector3(0,30,0);
+        Vector3 targetposition = transform.position + new Vector3(0,40,0);
         Vector3 newPosition = Vector3.MoveTowards(Player.Camera.transform.position, targetposition, 130f * Time.deltaTime);
         Player.Camera.transform.position = newPosition;
     }

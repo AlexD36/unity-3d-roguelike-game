@@ -9,6 +9,7 @@ public static class Player
     public static float Speed = .5f;
 
     public static GameObject Attack;
+    public static GameObject AttackExplosion;
 
     public static Camera Camera;
 }
