@@ -4,7 +4,6 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public CharacterController Controller;
-    public Animator A;
     public Transform T;
 
     // Update is called once per frame
@@ -13,13 +12,13 @@ public class PlayerMovement : MonoBehaviour
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
 
-        if(h != 0 || v != 0)
+        if((h != 0 || v != 0) && Player.State == "Idle")
         {
-            A.Play("Walk");     
+            Player.animator.SetFloat("Speed", 1);   
         }
         else
         {
-            A.Play("Idle");
+            Player.animator.SetFloat("Speed", 0);
         }
 
         Vector3 Move = new Vector3(h, 0, v) * Player.Speed;
@@ -40,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void LateUpdate()
     {
-        Vector3 targetposition = transform.position + new Vector3(0,60,0);
+        Vector3 targetposition = transform.position + new Vector3(0,30,0);
         Vector3 newPosition = Vector3.MoveTowards(Player.Camera.transform.position, targetposition, 130f * Time.deltaTime);
         Player.Camera.transform.position = newPosition;
     }

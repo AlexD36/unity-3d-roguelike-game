@@ -1624,7 +1624,9 @@ GameObject:
   - component: {fileID: 9072604173770258536}
   - component: {fileID: 9072604173770258537}
   - component: {fileID: 9072604173770258539}
+  - component: {fileID: 9072604173770258541}
   - component: {fileID: 9072604173770258538}
+  - component: {fileID: 9072604173770258540}
   m_Layer: 0
   m_Name: StickWizard
   m_TagString: Untagged
@@ -1766,8 +1768,6 @@ MonoBehaviour:
   Controller: {fileID: 9072604173770258539}
   A: {fileID: 9072604173770258537}
   T: {fileID: 9072604173770258536}
-  cam: {fileID: 330585545}
-  Speed: 0.01
 --- !u!143 &9072604173770258539
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1793,6 +1793,32 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &9072604173770258540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8548832382042317522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc196d59857e086429be356a296c4644, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9072604173770258541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8548832382042317522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2e7e972e2763f44483c2320e46785a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 330585545}
+  PlayerAnimator: {fileID: 9072604173770258537}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
