@@ -19,7 +19,7 @@
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/matchstick-mage.git
+   git clone https://github.com/AlexD36/unity-3d-roguelike-game
    ```
    
 2. **Install Unity**  
