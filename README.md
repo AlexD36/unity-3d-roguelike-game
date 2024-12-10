@@ -1,10 +1,12 @@
-Here’s a professional and clear README for your project:
 
 ---
 
 # **Matchstick Mage**
 
 **Matchstick Mage** is a 3D roguelike action game developed in Unity. Players control a wizard who wields a matchstick as a magical staff, exploring procedurally generated dungeons, battling enemies, and uncovering powerful upgrades. The game features fast-paced combat, strategic magic use, and an ever-changing world.
+
+![_c4c544c1-df03-4a27-ac24-ac0c1f126e9c](https://github.com/user-attachments/assets/b6497955-dae2-491c-a347-eb9f3e528f6e)
+
 
 ## Features
 - **3D Roguelike Gameplay**: Explore procedurally generated levels with unique enemies and challenges.
