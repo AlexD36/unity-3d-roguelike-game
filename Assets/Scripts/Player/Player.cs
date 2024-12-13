@@ -6,7 +6,7 @@ public static class Player
 
     public static Animator animator;
 
-    public static float Speed = .5f;
+    public static float Speed = .2f;
 
     public static GameObject Attack;
     public static GameObject AttackExplosion;
