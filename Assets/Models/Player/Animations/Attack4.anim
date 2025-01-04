@@ -452,7 +452,8 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -0.0000000055879354, y: -0.00000012293458, z: -0.000000001862646, w: 1}
+        value: {x: -0.0000000055879354, y: -0.00000012293458, z: -0.000000001862646,
+          w: 1}
         inSlope: {x: 0, y: 0, z: 0, w: 0}
         outSlope: {x: 0, y: 0, z: 0, w: 0}
         tangentMode: 0
@@ -461,7 +462,8 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
       - serializedVersion: 3
         time: 0.5
-        value: {x: -0.0000000055879354, y: -0.00000012293458, z: -0.000000001862646, w: 1}
+        value: {x: -0.0000000055879354, y: -0.00000012293458, z: -0.000000001862646,
+          w: 1}
         inSlope: {x: 0, y: 0, z: 0, w: 0}
         outSlope: {x: 0, y: 0, z: 0, w: 0}
         tangentMode: 0
@@ -13902,14 +13904,16 @@ AnimationClip:
   - time: 0.175
     functionName: Attack
     data: 
-    objectReferenceParameter: {fileID: 11500000, guid: dc196d59857e086429be356a296c4644, type: 3}
+    objectReferenceParameter: {fileID: 11500000, guid: 5bbde4807e1ebc748adbaa0f7ebeaefc,
+      type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.5
     functionName: FinishAttacking
     data: 
-    objectReferenceParameter: {fileID: 11500000, guid: dc196d59857e086429be356a296c4644, type: 3}
+    objectReferenceParameter: {fileID: 11500000, guid: 5bbde4807e1ebc748adbaa0f7ebeaefc,
+      type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

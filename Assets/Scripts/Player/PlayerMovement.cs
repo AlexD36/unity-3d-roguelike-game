@@ -1,27 +1,49 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
     public CharacterController Controller;
-    public Transform T;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
+        Player.animator.SetFloat("MoveSpeed", Player.Speed * 10);
+    }
+
+    private void Update()
+    {
+
+
+
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
 
-        if((h != 0 || v != 0) && Player.State == "Idle")
+        if((h != 0 || v != 0) && (Player.State == "Idle" || Player.State == "HoldingBomb"))
         {
-            Player.animator.SetFloat("Speed", 1);   
+            Player.animator.SetFloat("Speed", 1);
         }
         else
         {
             Player.animator.SetFloat("Speed", 0);
         }
 
-        Vector3 Move = new Vector3(h, 0, v) * Player.Speed;
+
+        //float downmove = 0;
+        //if(transform.position.y < 4.1)
+        //{
+        //    downmove = -Controller.transform.position.y + 4.1f;
+        //}
+
+        float ymove = 0;
+        if (transform.position.y != 0)
+        {
+             ymove = -transform.position.y;
+        }
+
+
+        Vector3 Move = new Vector3(h, ymove, v) * Player.Speed;
+        
         Controller.Move(Move);
 
 
@@ -35,12 +57,17 @@ public class PlayerMovement : MonoBehaviour
             Quaternion targetrotation = Quaternion.LookRotation(targetpoint - transform.position);
             transform.rotation = (Quaternion.Slerp(transform.rotation, targetrotation, 50f * Time.deltaTime));
         }
+
+
+
     }
+
 
     private void LateUpdate()
     {
-        Vector3 targetposition = transform.position + new Vector3(0,40,0);
-        Vector3 newPosition = Vector3.MoveTowards(Player.Camera.transform.position, targetposition, 130f * Time.deltaTime);
+      
+        Vector3 targetposition = transform.position + new Vector3(0, 109, 0);
+        Vector3 newPosition = Vector3.MoveTowards(Player.Camera.transform.position, targetposition, 150f * Time.deltaTime);
         Player.Camera.transform.position = newPosition;
     }
 }
