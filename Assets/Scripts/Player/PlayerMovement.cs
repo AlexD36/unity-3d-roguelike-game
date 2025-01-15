@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        Player.animator.SetFloat("MoveSpeed", Player.Speed * 10);
+        Player.animator.SetFloat("Speed", Player.Speed /20);
     }
 
     private void Update()
@@ -29,11 +29,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        //float downmove = 0;
-        //if(transform.position.y < 4.1)
-        //{
-        //    downmove = -Controller.transform.position.y + 4.1f;
-        //}
 
         float ymove = 0;
         if (transform.position.y != 0)
@@ -42,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        Vector3 Move = new Vector3(h, ymove, v) * Player.Speed;
+        Vector3 Move = new Vector3(h, ymove, v) * Player.Speed * Time.deltaTime;
         
         Controller.Move(Move);
 

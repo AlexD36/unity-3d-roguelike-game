@@ -6,14 +6,20 @@ using UnityEngine.Rendering;
 public static class Player
 {
 
+    public static AudioSource Audio;
+
+
+
     public static string State = "Idle";
     public static bool Invincible = false;
     public static Transform transform;
     public static GameObject PlayerStaff;
     public static Animator animator;
 
-    public static float Speed = .2f;
-    public static float KnockBack = 100;
+    public static float Speed = 40f;
+    public static float KnockBack = 40;
+    public static float EnemyKnockBack = 10;
+    public static float Damage = 1;
 
     public static float Health = 3f;
     public static float MaxHealth = 3f;

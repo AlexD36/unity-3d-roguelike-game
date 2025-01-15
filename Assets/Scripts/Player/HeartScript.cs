@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
 using Unity.VisualScripting;
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -143,31 +142,31 @@ public class HeartScript : MonoBehaviour
     }
 
 
-    private void Update()
-    {
+    //private void Update()
+    //{
 
 
-        if(Input.GetKey(KeyCode.I))
-        {
-            TakeDamage(1);
-        }
+    //    //if(Input.GetKey(KeyCode.I))
+    //    //{
+    //    //    TakeDamage(1);
+    //    //}
 
-        if (Input.GetKey(KeyCode.O))
-        {
-            TakeDamage(2);
-        }
+    //    //if (Input.GetKey(KeyCode.O))
+    //    //{
+    //    //    TakeDamage(2);
+    //    //}
 
-        if (Input.GetKey(KeyCode.P))
-        {
-            TakeDamage(3);
-        }
+    //    //if (Input.GetKey(KeyCode.P))
+    //    //{
+    //    //    TakeDamage(3);
+    //    //}
 
-        if (Input.GetKey(KeyCode.H))
-        {
-            Player.Health = Player.MaxHealth;
-            DrawHearts();
-        }
-    }
+    //    //if (Input.GetKey(KeyCode.H))
+    //    //{
+    //    //    Player.Health = Player.MaxHealth;
+    //    //    DrawHearts();
+    //    //}
+    //}
 
 
 

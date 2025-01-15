@@ -5,6 +5,8 @@ using UnityEngine;
 public class InitalizePlayer : MonoBehaviour
 {
     public Camera cam;
+    public AudioSource AS;
+
     public Animator PlayerAnimator;
     public GameObject PlayerAttack;
     public GameObject PlayerAttackExplosion;
@@ -25,8 +27,10 @@ public class InitalizePlayer : MonoBehaviour
 
     void Start()
     {
-        Application.targetFrameRate = 240;
+        Application.targetFrameRate = 120;
 
+
+        Player.Audio = AS;
         Player.Camera = cam;
         Player.animator = PlayerAnimator;
         Player.Attack = PlayerAttack;

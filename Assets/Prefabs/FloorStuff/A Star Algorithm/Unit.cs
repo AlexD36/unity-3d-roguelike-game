@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Unit : MonoBehaviour
+public class Unit : EnemyDamageScript
 {
     Grid g;
 
@@ -15,7 +15,10 @@ public class Unit : MonoBehaviour
     [Header("0: Chase Player\n" +
         "1: Random Path")]
     public int MonsterMovementType = 0;
+    
+    public float Health = 3;
 
+    public GameObject EnemyDeathEffect;
 
     public Transform target;
     public float speed = 5f;
@@ -24,16 +27,31 @@ public class Unit : MonoBehaviour
     Path path;
     [HideInInspector] public Rigidbody rb;
 
-    private void Start()
+
+
+    protected override void Start()
     {
+        base.Start();
+
+
         rb = GetComponent<Rigidbody>();
         g = GameObject.Find("A*").GetComponent<Grid>();
+
 
         switch (MonsterMovementType)
         {
             case 0: StartCoroutine(UpdatePath()); break;
             case 1: StartCoroutine(UpdatePathRandom()); break;
         }
+    }
+
+
+
+    public bool HitPlayer = false;
+
+    public void GivePlayerASecond()
+    {
+        HitPlayer = false;
     }
 
     public void OnPathFound(Vector3[] waypoints,bool pathSuccessful)
@@ -86,7 +104,7 @@ public class Unit : MonoBehaviour
     {
         if(Time.timeSinceLevelLoad < .3f)
         {
-            yield return new WaitForSeconds(.3f);
+            yield return new WaitForSeconds(.1f);
         }
         PathRequestManager.RequestPath(new PathRequest(transform.position, target.position, OnPathFound));
 

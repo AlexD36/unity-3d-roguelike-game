@@ -190,7 +190,7 @@ public class Grid : MonoBehaviour
                 {
                 Gizmos.color = Color.Lerp(Color.white, Color.black, Mathf.InverseLerp(penaltyMin, penaltyMax, n.movementPenalty));
                 Gizmos.color = (n.Walkable) ? Gizmos.color : Color.red;
-                Gizmos.DrawCube(n.WorldPosition, Vector3.one * (nodeDiameter));
+                Gizmos.DrawCube(n.WorldPosition - new Vector3(0,-1f,0), new Vector3(nodeDiameter,1, nodeDiameter));
             }
             }
         

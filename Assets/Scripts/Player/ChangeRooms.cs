@@ -125,21 +125,16 @@ public class ChangeRooms : MonoBehaviour
                 Level.EnemyCount = 0;
 
                 Transform Doors = NewRoom.transform.Find("Doors");
-
+                GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag("Door");
 
                 Animator A;
-                Doors.Find("LeftDoor").TryGetComponent<Animator>(out A);
-                A.enabled = true;
-                Doors.Find("RightDoor").TryGetComponent<Animator>(out A);
-                A.enabled = true;
-                Doors.Find("TopDoor").TryGetComponent<Animator>(out A);
-                A.enabled = true;
-                Doors.Find("BottomDoor").TryGetComponent<Animator>(out A);
-                A.enabled = true;
+                foreach(GameObject g in objectsWithTag)
+                {
+                    if(g.TryGetComponent<Animator>(out A))
+                    A.enabled = true;
+                }
+            
             }
-
-
-
 
 
         }
