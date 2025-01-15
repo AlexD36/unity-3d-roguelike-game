@@ -44,7 +44,7 @@
 - **Mouse**: Aim the matchstick staff.
 - **Left Click**: Cast fire magic with the staff.
 - **Right Click**: Use special abilities (if available).
-- **Space**: Jump (if applicable).
+- **E**: Drop bombs.
 
 ## Contributing
 
