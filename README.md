@@ -123,10 +123,4 @@
 
 ---
 
-## **Credits**
-
-- **Development**: Duta Alexandru
-- **University**: Transilvania University of Brașov, Discipline: PG
-
----
 
