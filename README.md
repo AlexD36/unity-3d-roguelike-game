@@ -11,12 +11,6 @@
 
 ---
 
-![ezgif com-optimize](https://github.com/user-attachments/assets/9cc74be1-04e9-4e76-be35-7be724b56be5)
-
-
-
----
-
 
 ## **Features**
 
@@ -26,6 +20,12 @@
 - **Tactical Bomb System**: Place or throw bombs to strategically eliminate obstacles and enemies, and uncover secret rooms.
 - **Secret Rooms**: Accessible by breaking a wall with a bomb, provided the room is adjacent to at least two other room tiles.
 - **Atmospheric Design**: Enjoy engaging visuals and sound design that immerse you in a fiery, magical world.
+
+---
+
+![ezgif com-optimize](https://github.com/user-attachments/assets/9cc74be1-04e9-4e76-be35-7be724b56be5)
+
+
 
 ---
 
